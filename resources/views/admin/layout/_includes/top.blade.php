@@ -15,6 +15,8 @@
 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" type="text/javascript"></script>
+
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -28,7 +30,7 @@
 					<li><a href="{{ route('admin.home') }}">Home</a></li>
 					<li><a href="{{ route('admin.products') }}">Produtos</a></li>
 					<li><a href="badges.html">Vendas</a></li>
-					<li><a href="badges.html">Usuários</a></li>
+					<li><a href="{{ route('admin.users') }}">Usuários</a></li>
 
 					<li><a href="badges.html" title="Notificações"><i class="material-icons">notifications</i></a></li>
 
@@ -41,7 +43,7 @@
 			<li><a href="{{ route('admin.home') }}">Home</a></li>
 			<li><a href="{{ route('admin.products') }}">Produtos</a></li>
 			<li><a href="badges.html">Vendas</a></li>
-			<li><a href="badges.html">Usuários</a></li>
+			<li><a href="{{ route('admin.users') }}">Usuários</a></li>
 
 			<li><a href="badges.html"><i class="material-icons">notifications</i> Notificações</a></li>
 			

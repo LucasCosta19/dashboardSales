@@ -12,12 +12,12 @@
                     {{ csrf_field() }}
 
                     <div class="input-field">
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" value="admin@gmail.com" required>
                         <label>E-mail</label>
                     </div>
 
                     <div class="input-field">
-                        <input type="password" name="password" required>
+                        <input type="password" name="password" value="123456" required>
                         <label>Senha</label>
                     </div>
 

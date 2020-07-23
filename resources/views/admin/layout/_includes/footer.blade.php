@@ -7,33 +7,58 @@
 		M.updateTextFields();
 		$('.sidenav').sidenav();
 		$(".dropdown-trigger").dropdown();
+    $('.amount').mask('#.##0,00', {reverse: true});
 	});
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 @if(session('mensagem'))
-<script>
-  toastr["success"]("{{session('mensagem')}}!<br /><br /><button type='button' class='btn clear'>OK</button>", "");
+  <script>
+    toastr["success"]("{{session('mensagem')}}!<br /><br /><button type='button' class='btn clear'>OK</button>", "");
 
-  toastr.options = {
-    "closeButton": true,
-    "debug": false,
-    "newestOnTop": false,
-    "progressBar": true,
-    "positionClass": "toast-bottom-left",
-    "preventDuplicates": false,
-    "showDuration": "9000",
-    "hideDuration": "12000",
-    "timeOut": 0,
-    "extendedTimeOut": 0,
-    "showEasing": "swing",
-    "hideEasing": "linear",
-    "showMethod": "fadeIn",
-    "hideMethod": "fadeOut",
-    "tapToDismiss": false
-  }
-</script>
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-bottom-left",
+      "preventDuplicates": false,
+      "showDuration": "9000",
+      "hideDuration": "12000",
+      "timeOut": 0,
+      "extendedTimeOut": 0,
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut",
+      "tapToDismiss": false
+    }
+  </script>
+@endif
+
+@if(session('mensagemErro'))
+  <script>
+    toastr["error"]("{{session('mensagemErro')}}!<br /><br /><button type='button' class='btn clear'>OK</button>", "");
+
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-bottom-left",
+      "preventDuplicates": false,
+      "showDuration": "9000",
+      "hideDuration": "12000",
+      "timeOut": 0,
+      "extendedTimeOut": 0,
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut",
+      "tapToDismiss": false
+    }
+  </script>
 @endif
 
 <style>

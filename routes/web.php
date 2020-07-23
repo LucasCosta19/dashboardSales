@@ -38,4 +38,30 @@ Route::group(['middleware'=>'auth'], function() {
 	Route::put('/admin/products/change/{id}', ['as'=>'admin.products.change', 'uses'=>'Admin\ProductsController@change']);
 
 	Route::get('/admin/products/delete/{id}', ['as'=>'admin.products.delete', 'uses'=>'Admin\ProductsController@delete']);
+
+	//sales
+	Route::get('/admin/sales', ['as'=>'admin.sales', 'uses'=>'Admin\SalesController@index']);
+	
+	Route::get('/admin/sales/new', ['as'=>'admin.sales.new', 'uses'=>'Admin\SalesController@new']);
+
+	Route::post('/admin/sales/save', ['as'=>'admin.sales.save', 'uses'=>'Admin\SalesController@save']);
+
+	Route::get('/admin/sales/edit/{id}', ['as'=>'admin.sales.edit', 'uses'=>'Admin\SalesController@edit']);
+
+	Route::put('/admin/sales/change/{id}', ['as'=>'admin.sales.change', 'uses'=>'Admin\SalesController@change']);
+
+	Route::get('/admin/sales/delete/{id}', ['as'=>'admin.sales.delete', 'uses'=>'Admin\SalesController@delete']);
+
+	//usuarios
+	Route::get('/admin/users', ['as'=>'admin.users', 'uses'=>'Admin\UsersController@index']);
+	
+	Route::get('/admin/users/new', ['as'=>'admin.users.new', 'uses'=>'Admin\UsersController@new']);
+
+	Route::post('/admin/users/save', ['as'=>'admin.users.save', 'uses'=>'Admin\UsersController@save']);
+
+	Route::get('/admin/users/edit/{id}', ['as'=>'admin.users.edit', 'uses'=>'Admin\UsersController@edit']);
+
+	Route::put('/admin/users/change/{id}', ['as'=>'admin.users.change', 'uses'=>'Admin\UsersController@change']);
+
+	Route::get('/admin/users/delete/{id}', ['as'=>'admin.users.delete', 'uses'=>'Admin\UsersController@delete']);
 });

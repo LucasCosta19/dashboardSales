@@ -4,7 +4,7 @@
 </div>
 
 <div class="input-field">
-	<input type="text" name="value" required="" value="{{ isset($product->value) ? $product->value : '' }}">
+	<input type="text" name="value" class="amount" required="" value="{{ isset($product->value) ? $product->value : '' }}">
 	<label>Valor</label>
 </div>
 
